@@ -7,7 +7,35 @@ body {
 }
 
 input {
-width: 100%;
-font-size: 1.2rem;
-color: pink;
+  width: 100%;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.card-grid {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.card {
+  align-content: center;
+  border: 2px solid gray;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  width: 25%;
+}
+
+.card p {
+padding: 5px;
+text-align: center;
+}
+
+.card img {
+max-height: 170px;
+display: block;
+margin: auto;
 }

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
-import { GiftGrid } from "./components/GiftGrid";
+import { GifGrid } from "./components/GifGrid";
 
-export const GiftExpertApp = () => {
+export const GifExpertApp = () => {
   const [categories, setCategories] = useState(["One Punch"]);
 
   // const handleAdd = () => {
@@ -17,7 +17,7 @@ export const GiftExpertApp = () => {
       {/* <button onClick={handleAdd}> Agregar </button> */}
       <ol>
         {categories.map((category, index) => {
-          return <GiftGrid category={category} key={index} />;
+          return <GifGrid category={category} key={index} />;
         })}
       </ol>
     </>
