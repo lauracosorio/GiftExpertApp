@@ -6,7 +6,7 @@ import { GifGridItem } from "./GifGridItem";
 export const GifGrid = ({ category }) => {
   // const [images, setImages] = useState([]);
 
-  const { data, loading } = useFetchGifs(category);
+  const { data: images, loading } = useFetchGifs(category);
 
   // useEffect(() => {
   //   getGifs(category).then((imgs) => {
@@ -16,12 +16,14 @@ export const GifGrid = ({ category }) => {
 
   return (
     <>
-      <h3>{category}</h3>
+      <h3 className="animate_animated animate__fadeIn">{category}</h3>
 
-      {loading && <p>Cargando...</p>}
+      {loading && (
+        <p className="animate__animated animate__flash">Cargando...</p>
+      )}
 
       <div className="card-grid">
-        {data.map((img) => {
+        {images.map((img) => {
           return <GifGridItem {...img} key={img.id} />;
         })}
       </div>
